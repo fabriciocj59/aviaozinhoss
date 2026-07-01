@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aeroporto Inteligente - Operação Caixa-Preta</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; background-color: #f0f2f5; }
+        .painel { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; }
+        button { margin: 10px; padding: 10px 20px; cursor: pointer; border: none; border-radius: 5px; color: white; }
+        #btnGastar { background-color: #e74c3c; }
+        #btnAbastecerSeguro { background-color: #2ecc71; }
+ 
+    /* Animação para piscar Amarelo */
+    @keyframes piscaAmarelo {
+        0% { background-color: #f0f2f5; }
+        50% { background-color: yellow; }
+        100% { background-color: #f0f2f5; }
+    }
+
+    /* Animação para piscar Vermelho */
+    @keyframes piscaVermelho {
+        0% { background-color: #f0f2f5; }
+        50% { background-color: red; }
+        100% { background-color: #f0f2f5; }
+    }
+
+    .alerta-leve {
+        animation: piscaAmarelo 0.5s infinite;
+    }
+
+    .alerta-grave {
+        animation: piscaVermelho 0.3s infinite;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h2>Abastecimento do Voo VIP-001</h2>
+        <p id="painelCombustivel">Aguardando sistema...</p>
+        
+        <button id="btnGastar">Gastar Combustível (Voar)</button>
+        <button id="btnAbastecerSeguro">Abastecer 10%</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
